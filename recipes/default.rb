@@ -60,7 +60,7 @@ execute 'update homebrew from github' do
 end
 
 node['homebrewalt']['tap'].each do |taps|
-  homebrewalt_cask taps
+  homebrewalt_tap taps
 end
 
 node['homebrewalt']['cask_apps'].each do |app|
