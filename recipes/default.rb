@@ -59,6 +59,10 @@ execute 'update homebrew from github' do
   command "sudo -u #{node['current_user']} /usr/local/bin/brew update || true"
 end
 
+node['homebrewalt']['tap'].each do |taps|
+  homebrewalt_cask taps
+end
+
 node['homebrewalt']['cask_apps'].each do |app|
   homebrewalt_cask app
 end
