@@ -21,3 +21,4 @@
 
 default['homebrewalt']['cask_apps'] = []
 default['homebrewalt']['apps'] = []
+default['homebrewalt']['tap'] = []
